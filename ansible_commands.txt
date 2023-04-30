@@ -4,3 +4,6 @@ ansible --version
 # To check the ansible install in detail
 ansible -m setup localhost
 
+# To check the playbook file for execution status 
+
+ansible-playbook -i inventory playbook.yaml --check
