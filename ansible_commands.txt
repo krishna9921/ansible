@@ -1,0 +1,6 @@
+# To check ansible version 
+ansible --version
+
+# To check the ansible install in detail
+ansible -m setup localhost
+
