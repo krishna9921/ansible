@@ -7,3 +7,20 @@ ansible -m setup localhost
 # To check the playbook file for execution status 
 
 ansible-playbook -i inventory playbook.yaml --check
+
+# To set the basic .cfg file for ssh 
+ vi ansible.cfg
+[defaults]
+host_key_checking = False
+
+# How to create a inventory file and check the ping 
+inventory file entries: <hostname> ansible_host=<hostname> ansible_ssh_pass=<password>
+ansible -i inventory node01 -m ping -v
+
+# To add entries of WINDOWS AND LINUX in ansible inventory the following keywords need to be used.
+
+
+host_alias ansible_host=<> ansible_connection=ssh ansible_user=<administrator> ansible_ssh_pass=<>
+
+host_alias ansible_host=<> ansible_connection=winrm ansible_user=<administrator> ansible_password=<>
+
